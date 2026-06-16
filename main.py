@@ -1,6 +1,6 @@
 import pygame, constants
 from logger import log_state
-from constants import SCREEN_HEIGHT, SCREEN_WIDTH, LINE_WIDTH, PLAYER_RADIUS
+from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from player import Player
 
 def main():
@@ -16,6 +16,7 @@ def main():
     print(f"Screen width: {SCREEN_WIDTH} \nScreen height: {SCREEN_HEIGHT}")
     while True:
         log_state()
+        player1.update(dt)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
